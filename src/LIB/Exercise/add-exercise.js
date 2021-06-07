@@ -16,7 +16,6 @@ class AddExercise extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hellowwwwwwwwwwww");
 
     const formData = new FormData();
 
@@ -29,13 +28,12 @@ class AddExercise extends Component {
     formData.append("tremister", tremister);
     formData.append("exerciseImage", exerciseImage);
 
-    fetch("https://lit-caverns-52628.herokuapp.com/api/admin/addexercise",{
+    fetch("https://lit-caverns-52628.herokuapp.com/api/admin/addexercise", {
       method: "POST",
       headers: {
         authorization: "Bearer " + localStorage.getItem("accessToken"),
-       
       },
-      body:formData
+      body: formData,
     })
       .then((response) => {
         response.json();
@@ -74,7 +72,6 @@ class AddExercise extends Component {
           isOpen={this.state.exampleModal}
           toggle={() => this.toggleModal("exampleModal")}
         >
-          
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
               Add Exercise
@@ -123,11 +120,15 @@ class AddExercise extends Component {
               </FormGroup>
               <p className="h4">Tremister</p>
               <FormGroup>
-                <Input type="select" name="select" id="exampleSelect">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                <Input
+                  type="select"
+                  name="select"
+                  id="exampleSelect"
                   onChange={(e) => this.setState({ level1: e.target.value })}
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
                 </Input>
               </FormGroup>
             </div>
