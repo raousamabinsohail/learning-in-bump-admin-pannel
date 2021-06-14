@@ -45,9 +45,14 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        if(!data.accessToken) throw new Error("Invalid email or password")
         console.log("Success:", data);
+        if(data==='wrong Password')alert("Invalid Email or Password ");
+        else{
+        console.log("accesstoken=>",data.accessToken)
         localStorage.setItem("accessToken", data.accessToken);
         setloginSuccess(true);
+      }
       })
       .catch((error) => {
         console.error("Error:", error);

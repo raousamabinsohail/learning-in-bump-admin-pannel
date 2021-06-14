@@ -10,6 +10,7 @@ const Header = () => {
   const [userCount, setUserCount, ] = useState(0);
   const [productCount, setProductCount, ] = useState(0);
   const [adminCount, setAdminCount, ] = useState(0);
+
   useEffect(() => {
     fetch("https://lit-caverns-52628.herokuapp.com/api/admin/countquestions", {
       method: "GET",
@@ -21,6 +22,7 @@ const Header = () => {
     })
       .then((response) => response.json())
       .then((questionCount) => {
+        if(!questionCount) throw Error("Not found")
         console.log("Success:", questionCount);
     
         setQuestionCount(questionCount)
