@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/learning-in-bump-admin-pannel/static/css/main.7e96afe4.chunk.css",
-    "main.js": "/learning-in-bump-admin-pannel/static/js/main.802bd231.chunk.js",
-    "main.js.map": "/learning-in-bump-admin-pannel/static/js/main.802bd231.chunk.js.map",
+    "main.js": "/learning-in-bump-admin-pannel/static/js/main.02ffc44a.chunk.js",
+    "main.js.map": "/learning-in-bump-admin-pannel/static/js/main.02ffc44a.chunk.js.map",
     "runtime-main.js": "/learning-in-bump-admin-pannel/static/js/runtime-main.f836211a.js",
     "runtime-main.js.map": "/learning-in-bump-admin-pannel/static/js/runtime-main.f836211a.js.map",
     "static/css/2.7ea1b04e.chunk.css": "/learning-in-bump-admin-pannel/static/css/2.7ea1b04e.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.7ea1b04e.chunk.css.map": "/learning-in-bump-admin-pannel/static/css/2.7ea1b04e.chunk.css.map",
     "static/css/main.7e96afe4.chunk.css.map": "/learning-in-bump-admin-pannel/static/css/main.7e96afe4.chunk.css.map",
     "static/js/2.b9e7e3c3.chunk.js.LICENSE.txt": "/learning-in-bump-admin-pannel/static/js/2.b9e7e3c3.chunk.js.LICENSE.txt",
-    "static/js/main.802bd231.chunk.js.LICENSE.txt": "/learning-in-bump-admin-pannel/static/js/main.802bd231.chunk.js.LICENSE.txt",
+    "static/js/main.02ffc44a.chunk.js.LICENSE.txt": "/learning-in-bump-admin-pannel/static/js/main.02ffc44a.chunk.js.LICENSE.txt",
     "static/media/LIBlogo.png": "/learning-in-bump-admin-pannel/static/media/LIBlogo.2440d64b.png",
     "static/media/all.min.css": "/learning-in-bump-admin-pannel/static/media/fa-solid-900.f4f93856.woff",
     "static/media/logo.png": "/learning-in-bump-admin-pannel/static/media/logo.5aa25305.png",
@@ -25,6 +25,6 @@
     "static/css/2.7ea1b04e.chunk.css",
     "static/js/2.b9e7e3c3.chunk.js",
     "static/css/main.7e96afe4.chunk.css",
-    "static/js/main.802bd231.chunk.js"
+    "static/js/main.02ffc44a.chunk.js"
   ]
 }
