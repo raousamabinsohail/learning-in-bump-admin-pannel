@@ -23,20 +23,20 @@ class index extends Component {
       data: [],
       curretpage: 1,
       startIndex: 0,
-      endIndex: 5,
+      endIndex: 30,
     };
   }
 
   changePage = (i) => {
-    let ofset = i * 5;
+    let ofset = i * 30;
     this.setState({
       curretpage: i,
-      startIndex: ofset - 5,
+      startIndex: ofset - 30,
       endIndex: ofset,
     });
   };
   makePagination = () => {
-    let pages = Math.ceil(this.state.data.length / 5);
+    let pages = Math.ceil(this.state.data.length / 30);
 
     return (
       <React.Fragment>
@@ -117,7 +117,7 @@ class index extends Component {
             <div className="col">
               <Card className="shadow">
                 <CardHeader className="border-0">
-                  <h3 className="mb-0">Card tables</h3>
+                  <h3 className="mb-0">Questions tables</h3>
                 </CardHeader>
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
@@ -137,11 +137,11 @@ class index extends Component {
                       .slice(this.state.startIndex, this.state.endIndex)
                       .map((value, index) => (
                         <tr key={index}>
-                          <th scope="row">{value.description}</th>
-                          <td>{value.options[0]}</td>
-                          <td>{value.options[1]}</td>
-                          <td>{value.options[2]}</td>
-                          <td>{value.options[3]}</td>
+                          <th style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"300px"}}>{value.description}</th>
+                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"200px"}}>{value.options[0]}</td>
+                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"200px"}}>{value.options[1]}</td>
+                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"200px"}}>{value.options[2]}</td>
+                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"200px"}}>{value.options[3]}</td>
                           <td>{value.level}</td>
                           <td>{value.rightAnswer}</td>
                           <td className="text-right">
