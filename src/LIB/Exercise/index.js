@@ -105,8 +105,6 @@ class Index extends Component {
       });
   };
 
-
-
   render() {
     return (
       <React.Fragment>
@@ -135,12 +133,32 @@ class Index extends Component {
                       .slice(this.state.startIndex, this.state.endIndex)
                       .map((value, index) => (
                         <tr key={index}>
-                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"300px"}} >{value.description}</td>
-                          <td style={{wordBreak:"normal",whiteSpace: "break-spaces",minWidth:"300px"}}>{value.duration}</td>
+                          <td
+                            style={{
+                              wordBreak: "normal",
+                              whiteSpace: "break-spaces",
+                              minWidth: "300px",
+                            }}
+                          >
+                            {value.description}
+                          </td>
+                          <td
+                            style={{
+                              wordBreak: "normal",
+                              whiteSpace: "break-spaces",
+                              minWidth: "300px",
+                            }}
+                          >
+                            {value.duration}
+                          </td>
 
                           <td>{value.tremister}</td>
                           <td>
-                            <img src={value.exerciseImage} alt="new" style={{height:"100px"}} />
+                            <img
+                              src={value.exerciseImage}
+                              alt="new"
+                              style={{ height: "100px" }}
+                            />
                           </td>
                           <td>{value.createdDate}</td>
                           <td className="text-right">
