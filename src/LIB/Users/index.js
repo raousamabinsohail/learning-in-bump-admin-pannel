@@ -163,14 +163,6 @@ class index extends Component {
                                     this.HandleDelete(value._id, index)
                                   }
                                 >
-                                  View Details
-                                </DropdownItem>
-                                <DropdownItem
-                                  href="#pablo"
-                                  onClick={() =>
-                                    this.HandleDelete(value._id, index)
-                                  }
-                                >
                                   Delete
                                 </DropdownItem>
                               </DropdownMenu>

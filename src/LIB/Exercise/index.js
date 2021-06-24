@@ -140,7 +140,7 @@ class Index extends Component {
 
                           <td>{value.tremister}</td>
                           <td>
-                            <img src={value.exerciseImage} alt="new" />
+                            <img src={value.exerciseImage} alt="new" style={{height:"100px"}} />
                           </td>
                           <td>{value.createdDate}</td>
                           <td className="text-right">

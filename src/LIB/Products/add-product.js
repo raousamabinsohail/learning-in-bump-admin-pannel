@@ -6,7 +6,7 @@ class AddProduct extends Component {
     exampleModal: false,
     error: false,
     errorText: "",
-    tremister:1
+    tremister: 1,
   };
   toggleModal = (state) => {
     this.setState({
@@ -20,12 +20,13 @@ class AddProduct extends Component {
     e.preventDefault();
 
     const data = {
-        productName: this.state.productName,
-        description: this.state.description,
-        url: this.state.url,
-        tremister: parseInt(this.state.tremister)
+      productName: this.state.productName,
+      description: this.state.description,
+      url: this.state.url,
+      tremister: parseInt(this.state.tremister),
     };
-   fetch("https://lit-caverns-52628.herokuapp.com/api/admin/addproduct", {
+
+    fetch("https://lit-caverns-52628.herokuapp.com/api/admin/addproduct", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +99,9 @@ class AddProduct extends Component {
                   placeholder="Enter Product Name"
                   type="text"
                   required="true"
-                  onChange={(e) => this.setState({ productName: e.target.value })}
+                  onChange={(e) =>
+                    this.setState({ productName: e.target.value })
+                  }
                 />
               </FormGroup>
               <p className="h4">Description</p>
@@ -108,7 +111,9 @@ class AddProduct extends Component {
                   placeholder="Enter Description"
                   type="textarea"
                   required="true"
-                  onChange={(e) => this.setState({ description: e.target.value })}
+                  onChange={(e) =>
+                    this.setState({ description: e.target.value })
+                  }
                 />
               </FormGroup>
               <p className="h4">Image URL</p>
@@ -123,11 +128,15 @@ class AddProduct extends Component {
               </FormGroup>
               <p className="h4">Tremister</p>
               <FormGroup>
-                <Input type="select" name="select" id="exampleSelect">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                <Input
+                  type="select"
+                  name="select"
+                  id="exampleSelect"
                   onChange={(e) => this.setState({ tremister: e.target.value })}
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
                 </Input>
               </FormGroup>
             </div>
